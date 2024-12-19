@@ -10,74 +10,35 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Base Styles */
-        body {
-            font-family: Arial, sans-serif;
-        }
-
+        /* Ajustos addicionals per fer les targetes més responsives */
         .card-img-top {
             object-fit: cover;
             height: 200px; /* Imatges amb altura uniforme */
         }
-
         .hero {
             background-size: cover;
             background-position: center;
-            padding: 50px 0;
         }
-
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 1.5s forwards;
+        .contact-form {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
+        .contact-form input, .contact-form textarea {
+            margin-bottom: 20px;
         }
-
-        /* Responsive Design */
-        .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .contact-form button {
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
         }
-
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
         .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-        }
-
-        /* Estils de pantalla petita */
-        @media (max-width: 767px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .card {
-                margin-bottom: 20px;
-            }
-        }
-
-        /* Add idle animation on hover */
-        .card-body h5 {
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .card-body:hover h5 {
-            transform: translateY(-5px);
-            color: #007bff;
+            transform: scale(1.05) translateY(-10px);
+            transition: transform 0.3s ease;
         }
     </style>
 </head>
@@ -86,11 +47,21 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">Recetas de Mariscos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Hero section -->
-    <header class="hero bg-dark text-white text-center fade-in">
+    <header class="hero bg-dark text-white text-center py-5">
         <h1 class="display-4">Recetas Deliciosas de Mariscos</h1>
         <p class="lead">¡Explora una variedad de recetas frescas y sabrosas para disfrutar del mar en tu hogar!</p>
     </header>
@@ -108,7 +79,7 @@
 
     <!-- Contenedor de recetas -->
     <section class="container py-5">
-        <div id="recetas-container" class="row fade-in">
+        <div id="recetas-container" class="row">
             <!-- Camarones -->
             <div class="col-12 col-sm-6 col-lg-3 mb-4 receta" data-categoria="camarones">
                 <div class="card">
@@ -153,6 +124,29 @@
                     </div>
                 </div>
             </div>
+            <!-- Puedes agregar más recetas aquí -->
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Contacte con Nosotros</h2>
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" id="name" placeholder="Tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
+            </form>
         </div>
     </section>
 
@@ -162,6 +156,9 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
