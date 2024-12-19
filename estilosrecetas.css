@@ -1,0 +1,114 @@
+/* Estils generals */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+}
+
+.hero {
+    background-image: url('fondo-mariscos.jpg'); /* Aquí afegeix la imatge de fons */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Botons de filtres */
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Contenedor de recetas */
+#recetas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 400px; /* Fa que totes les targetes siguin de la mateixa alçada */
+    width: 750%; /* Assegura l'ample complet dins del contenidor */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: white;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 150px; /* Alçada fixa per assegurar una aparença consistent */
+    object-fit: cover; /* Evita la deformació de la imatge */
+    border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+    flex-grow: 1; /* Assegura que el cos ocupi l'espai restant */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 10px 0;
+    text-align: center; /* Centra el text */
+    overflow: hidden; /* Evita que el text surti dels límits */
+    text-overflow: ellipsis; /* Afegeix punts suspensius si el text és massa llarg */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limita el text a 3 línies */
+    -webkit-box-orient: vertical;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    margin-top: auto; /* Manté el botó a la part inferior */
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

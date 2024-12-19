@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora nuestras recetas de mariscos, filtra por tipo y disfruta de los mejores sabores del mar.">
+    <meta name="keywords" content="recetas, mariscos, camarones, ceviche, paella, langosta">
+    <meta name="author" content="Tu Nombre">
+    <title>Recetas de Mariscos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Ajustes addicionals per fer les targetes més responsives */
+        .card-img-top {
+            object-fit: cover;
+            height: 200px; /* Imatges amb altura uniforme */
+        }
+        .hero {
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Recetas de Mariscos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero section -->
+    <header class="hero bg-dark text-white text-center py-5">
+        <h1 class="display-4">Recetas Deliciosas de Mariscos</h1>
+        <p class="lead">¡Explora una variedad de recetas frescas y sabrosas para disfrutar del mar en tu hogar!</p>
+    </header>
+
+    <!-- Sección de filtros -->
+    <section class="container my-5">
+        <div class="text-center mb-4">
+            <button class="btn btn-info btn-lg mb-2 mx-2" id="todos">Todas las recetas</button>
+            <button class="btn btn-danger btn-lg mb-2 mx-2" id="camarones">Recetas con Camarones</button>
+            <button class="btn btn-success btn-lg mb-2 mx-2" id="ceviche">Recetas con Ceviche</button>
+            <button class="btn btn-warning btn-lg mb-2 mx-2" id="langosta">Recetas con Langosta</button>
+            <button class="btn btn-secondary btn-lg mb-2 mx-2" id="paella">Recetas con Paella</button>
+        </div>
+    </section>
+
+    <!-- Contenedor de recetas -->
+    <section class="container py-5">
+        <div id="recetas-container" class="row">
+            <!-- Camarones -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4 receta" data-categoria="camarones">
+                <div class="card">
+                    <img src="images/camarones.jpeg" class="card-img-top" alt="Camarones al Ajillo">
+                    <div class="card-body">
+                        <h5 class="card-title">Camarones al Ajillo</h5>
+                        <p class="card-text">Camarones cocinados con ajo, aceite de oliva y especias.</p>
+                        <a href="receta1.html" class="btn btn-primary">Ver Receta</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Ceviche -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4 receta" data-categoria="ceviche">
+                <div class="card">
+                    <img src="images/ceviche.jpeg" class="card-img-top" alt="Ceviche de Mariscos">
+                    <div class="card-body">
+                        <h5 class="card-title">Ceviche de Mariscos</h5>
+                        <p class="card-text">Ceviche fresco con camarones, pescado y limón.</p>
+                        <a href="receta2.html" class="btn btn-primary">Ver Receta</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Langosta -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4 receta" data-categoria="langosta">
+                <div class="card">
+                    <img src="images/langosta.jpeg" class="card-img-top" alt="Langosta a la Parrilla">
+                    <div class="card-body">
+                        <h5 class="card-title">Langosta a la Parrilla</h5>
+                        <p class="card-text">Langosta a la parrilla con mantequilla y ajo.</p>
+                        <a href="receta3.html" class="btn btn-primary">Ver Receta</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Paella -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4 receta" data-categoria="paella">
+                <div class="card">
+                    <img src="images/paella.jpeg" class="card-img-top" alt="Paella de Mariscos">
+                    <div class="card-body">
+                        <h5 class="card-title">Paella de Mariscos</h5>
+                        <p class="card-text">Arroz con mariscos frescos como camarones y mejillones.</p>
+                        <a href="receta4.html" class="btn btn-primary">Ver Receta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Recetas de Mariscos. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
