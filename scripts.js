@@ -1,168 +1,35 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explora nuestras recetas de mariscos, filtra por tipo y disfruta de los mejores sabores del mar.">
-    <meta name="keywords" content="recetas, mariscos, camarones, ceviche, paella, langosta">
-    <meta name="author" content="Tu Nombre">
-    <title>Recetas de Mariscos</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Base Styles */
-        body {
-            font-family: Arial, sans-serif;
-        }
+document.addEventListener('DOMContentLoaded', function () {
+    const recetasContainer = document.getElementById('recetas-container');
+    const botons = document.querySelectorAll('button');
+    const recetas = recetasContainer.querySelectorAll('.receta');
 
-        .card-img-top {
-            object-fit: cover;
-            height: 200px; /* Imatges amb altura uniforme */
-        }
+    function filtrarRecetas(categoria) {
+        recetas.forEach(receta => {
+            receta.style.display = (categoria === 'todos' || receta.dataset.categoria === categoria) ? '' : 'none';
+        });
+    }
 
-        .hero {
-            background-size: cover;
-            background-position: center;
-            padding: 50px 0;
-        }
+    botons.forEach(boton => {
+        boton.addEventListener('click', function () {
+            const categoria = this.id;
+            filtrarRecetas(categoria);
+        });
+    });
 
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 1.5s forwards;
-        }
+    // Mostrar totes les receptes inicialment
+    filtrarRecetas('todos');
 
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
+    // Afegir efecte de moviment a les targetes
+    recetas.forEach(receta => {
+        const card = receta.querySelector('.card');
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'scale(1.05) translateY(-10px)';
+            card.style.transition = 'transform 0.3s ease';
+        });
 
-        /* Responsive Design */
-        .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-        }
-
-        /* Estils de pantalla petita */
-        @media (max-width: 767px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .card {
-                margin-bottom: 20px;
-            }
-        }
-
-        /* Add idle animation on hover */
-        .card-body h5 {
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .card-body:hover h5 {
-            transform: translateY(-5px);
-            color: #007bff;
-        }
-    </style>
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Recetas de Mariscos</a>
-        </div>
-    </nav>
-
-    <!-- Hero section -->
-    <header class="hero bg-dark text-white text-center fade-in">
-        <h1 class="display-4">Recetas Deliciosas de Mariscos</h1>
-        <p class="lead">¡Explora una variedad de recetas frescas y sabrosas para disfrutar del mar en tu hogar!</p>
-    </header>
-
-    <!-- Sección de filtros -->
-    <section class="container my-5">
-        <div class="text-center mb-4">
-            <button class="btn btn-info btn-lg mb-2 mx-2" id="todos">Todas las recetas</button>
-            <button class="btn btn-danger btn-lg mb-2 mx-2" id="camarones">Recetas con Camarones</button>
-            <button class="btn btn-success btn-lg mb-2 mx-2" id="ceviche">Recetas con Ceviche</button>
-            <button class="btn btn-warning btn-lg mb-2 mx-2" id="langosta">Recetas con Langosta</button>
-            <button class="btn btn-secondary btn-lg mb-2 mx-2" id="paella">Recetas con Paella</button>
-        </div>
-    </section>
-
-    <!-- Contenedor de recetas -->
-    <section class="container py-5">
-        <div id="recetas-container" class="row fade-in">
-            <!-- Camarones -->
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 receta" data-categoria="camarones">
-                <div class="card">
-                    <img src="images/camarones.jpeg" class="card-img-top" alt="Camarones al Ajillo">
-                    <div class="card-body">
-                        <h5 class="card-title">Camarones al Ajillo</h5>
-                        <p class="card-text">Camarones cocinados con ajo, aceite de oliva y especias.</p>
-                        <a href="receta1.html" class="btn btn-primary">Ver Receta</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Ceviche -->
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 receta" data-categoria="ceviche">
-                <div class="card">
-                    <img src="images/ceviche.jpeg" class="card-img-top" alt="Ceviche de Mariscos">
-                    <div class="card-body">
-                        <h5 class="card-title">Ceviche de Mariscos</h5>
-                        <p class="card-text">Ceviche fresco con camarones, pescado y limón.</p>
-                        <a href="receta2.html" class="btn btn-primary">Ver Receta</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Langosta -->
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 receta" data-categoria="langosta">
-                <div class="card">
-                    <img src="images/langosta.jpeg" class="card-img-top" alt="Langosta a la Parrilla">
-                    <div class="card-body">
-                        <h5 class="card-title">Langosta a la Parrilla</h5>
-                        <p class="card-text">Langosta a la parrilla con mantequilla y ajo.</p>
-                        <a href="receta3.html" class="btn btn-primary">Ver Receta</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Paella -->
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 receta" data-categoria="paella">
-                <div class="card">
-                    <img src="images/paella.jpeg" class="card-img-top" alt="Paella de Mariscos">
-                    <div class="card-body">
-                        <h5 class="card-title">Paella de Mariscos</h5>
-                        <p class="card-text">Arroz con mariscos frescos como camarones y mejillones.</p>
-                        <a href="receta4.html" class="btn btn-primary">Ver Receta</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <p>&copy; 2024 Recetas de Mariscos. Todos los derechos reservados.</p>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="scripts.js"></script>
-</body>
-</html>
-
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'scale(1) translateY(0)';
+            card.style.transition = 'transform 0.3s ease';
+        });
+    });
+});
