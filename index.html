@@ -12,35 +12,55 @@
     <link rel="stylesheet" href="estilosrecetas.css">
     <script defer src="scripts.js"></script>
     <style>
-        .card-img-top {
-            object-fit: cover;
-            height: 200px;
-        }
-        .hero {
-            background-size: cover;
-            background-position: center;
-        }
         .carousel img {
             width: 100%;
-            display: none;
+            height: 500px;
+            object-fit: cover;
         }
-        .carousel img.active {
-            display: block;
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+        }
+        #map {
+            width: 100%;
+            height: 400px;
         }
     </style>
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">Recetas de Mariscos</a>
         </div>
     </nav>
 
-    <!-- Carrusel d'imatges com a header -->
-    <header class="hero bg-dark text-white text-center py-5">
-        <h1 class="display-4">Recetas Deliciosas de Mariscos</h1>
+    <!-- Header amb carrusel -->
+    <header class="hero">
+        <div id="carouselHeader" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/img1.jpg" class="d-block w-100" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/img2.jpg" class="d-block w-100" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/img3.jpg" class="d-block w-100" alt="Imagen 3">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselHeader" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselHeader" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+        <h1 class="display-4 text-center text-white mt-3">Recetas Deliciosas de Mariscos</h1>
     </header>
 
+    <!-- Vídeo promocional -->
     <section class="container my-5">
         <h2>Descubre nuestra empresa</h2>
         <video controls width="100%">
@@ -48,71 +68,18 @@
             Tu navegador no soporta el vídeo.
         </video>
     </section>
-    
-    <!-- Sección de filtros -->
-    <section class="container my-5">
-        <div class="text-center mb-4">
-            <button class="btn btn-info btn-lg mb-2 mx-2" id="todos">Todas las recetas</button>
-            <button class="btn btn-danger btn-lg mb-2 mx-2" id="camarones">Recetas con Camarones</button>
-            <button class="btn btn-success btn-lg mb-2 mx-2" id="ceviche">Recetas con Ceviche</button>
-            <button class="btn btn-warning btn-lg mb-2 mx-2" id="langosta">Recetas con Langosta</button>
-            <button class="btn btn-secondary btn-lg mb-2 mx-2" id="paella">Recetas con Paella</button>
-        </div>
-    </section>
 
-    <!-- Contenedor de recetas -->
+    <!-- Contingut de receptes -->
     <section class="container py-5">
+        <h2 class="text-center">Nuestras recetas</h2>
         <div id="recetas-container" class="row">
-            <!-- Camarones -->
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 receta" data-categoria="camarones">
-                <div class="card">
-                    <img src="images/camarones.jpeg" class="card-img-top" alt="Camarones al Ajillo">
-                    <div class="card-body">
-                        <h5 class="card-title">Camarones al Ajillo</h5>
-                        <p class="card-text">Camarones cocinados con ajo, aceite de oliva y especias.</p>
-                        <a href="receta1.html" class="btn btn-primary">Ver Receta</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Ceviche -->
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 receta" data-categoria="ceviche">
-                <div class="card">
-                    <img src="images/ceviche.jpeg" class="card-img-top" alt="Ceviche de Mariscos">
-                    <div class="card-body">
-                        <h5 class="card-title">Ceviche de Mariscos</h5>
-                        <p class="card-text">Ceviche fresco con camarones, pescado y limón.</p>
-                        <a href="receta2.html" class="btn btn-primary">Ver Receta</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Langosta -->
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 receta" data-categoria="langosta">
-                <div class="card">
-                    <img src="images/langosta.jpeg" class="card-img-top" alt="Langosta a la Parrilla">
-                    <div class="card-body">
-                        <h5 class="card-title">Langosta a la Parrilla</h5>
-                        <p class="card-text">Langosta a la parrilla con mantequilla y ajo.</p>
-                        <a href="receta3.html" class="btn btn-primary">Ver Receta</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Paella -->
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 receta" data-categoria="paella">
-                <div class="card">
-                    <img src="images/paella.jpeg" class="card-img-top" alt="Paella de Mariscos">
-                    <div class="card-body">
-                        <h5 class="card-title">Paella de Mariscos</h5>
-                        <p class="card-text">Arroz con mariscos frescos como camarones y mejillones.</p>
-                        <a href="receta4.html" class="btn btn-primary">Ver Receta</a>
-                    </div>
-                </div>
-            </div>
+            <!-- Aquí van les targetes de receptes -->
         </div>
     </section>
 
-    <!-- Sección de Contacto -->
+    <!-- Contacte -->
     <section class="container my-5">
-        <h2 class="text-center mb-4">Contacte con Nosotros</h2>
+        <h2 class="text-center mb-4">Contacto</h2>
         <div class="contact-form">
             <form>
                 <div class="form-group">
@@ -132,15 +99,15 @@
         </div>
     </section>
 
-    <!-- Mapa interactiu -->
+    <!-- Mapa -->
     <section class="container my-5">
         <h2>¿Dónde estamos?</h2>
-        <div id="map" style="width: 100%; height: 400px;"></div>
+        <div id="map"></div>
     </section>
 
-    <!-- Infografía interactiva -->
+    <!-- Infografia interactiva -->
     <section class="container my-5">
-        <h2>Nuestra empresa en cifras</h2>
+        <h2>Infografía interactiva</h2>
         <iframe src="https://www.canva.com/design/infografia" width="100%" height="500px" frameborder="0"></iframe>
     </section>
 
@@ -150,7 +117,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
