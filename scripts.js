@@ -17,6 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.appendChild(script);
     }
 
+    window.onload = () => {
+    document.getElementById('name').focus();
+};
+
+
     // ---------- Formulari de contacte ----------
     const contactForm = document.querySelector(".contact-form form");
     if (contactForm) {
