@@ -112,3 +112,10 @@ footer {
     padding: 20px;
     text-align: center;
 }
+
+
+/* Estils per ressaltar el focus en navegació per teclat */
+input:focus, textarea:focus, button:focus {
+    outline: 3px solid #007bff;
+    outline-offset: 2px;
+}
