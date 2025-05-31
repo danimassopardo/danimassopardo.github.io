@@ -1,0 +1,294 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #f8fbff;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+.hero {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Estilos para el vídeo promocional */
+.video-container {
+    max-width: 800px;
+    margin: 30px auto 0;
+}
+
+.video-container .embed-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Carrusel */
+.carousel {
+    margin-bottom: 40px;
+}
+
+.carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    bottom: 30px;
+}
+
+.carousel-caption h3 {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+/* Infografía */
+.infografia-item {
+    transition: all 0.3s ease;
+    height: 100%;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.infografia-item:focus {
+    outline: 3px solid #97a3b1;
+    outline-offset: 3px;
+}
+
+.infografia-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Botones de filtros */
+button {
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+button:hover, button:focus {
+    transform: scale(1.05);
+    outline: none;
+}
+
+button:focus {
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.5);
+}
+
+#recetas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.receta {
+    height: 100%;
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    border-radius: 1px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: white;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover, .card:focus-within {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 10px 0;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    margin-top: auto;
+    padding: 8px 16px;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #0056b3;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.5);
+}
+
+/* Formulario de contacto */
+.contact-form {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input, .contact-form textarea {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover, .contact-form button:focus {
+    background-color: #0056b3;
+    outline: none;
+}
+
+/* Mapa */
+.map-container {
+    height: 100%;
+    min-height: 450px;
+}
+
+.map-container iframe {
+    min-height: 450px;
+    border: none;
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer a:hover, footer a:focus {
+    color: #ddd;
+    text-decoration: none;
+}
+
+/* Estilos para el foco */
+:focus {
+    outline: 3px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    .video-container {
+        padding: 0 15px;
+    }
+    
+    .infografia-item {
+        margin-bottom: 20px;
+    }
+    
+    .map-container {
+        margin-top: 20px;
+    }
+
+    #recetas-container {
+        grid-template-columns: 1fr;
+    }
+}
