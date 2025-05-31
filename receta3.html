@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Langosta a la Parrilla - Un plato elegante y sofisticado">
+    <meta name="keywords" content="langosta, parrilla, mariscos, receta gourmet, cocina de lujo">
+    <title>Langosta a la Parrilla | Recetas de Mariscos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilosrecetas.css">
+    <style>
+        .recipe-header {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            padding: 100px 0;
+            color: white;
+            margin-top: 56px;
+        }
+
+        .recipe-info {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: -50px;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .recipe-info .info-item {
+            text-align: center;
+            padding: 15px;
+            border-right: 1px solid #dee2e6;
+        }
+
+        .recipe-info .info-item:last-child {
+            border-right: none;
+        }
+
+        .ingredients-list {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .step-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .nutrition-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .nutrition-item {
+            padding: 15px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .nutrition-item:last-child {
+            border-bottom: none;
+        }
+
+        .tips-section {
+            background-color: #e8f4ff;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .gallery-img {
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .share-buttons {
+            margin-top: 30px;
+        }
+
+        .share-buttons .btn {
+            margin: 5px;
+            border-radius: 30px;
+            padding: 10px 20px;
+        }
+
+        .rating {
+            color: #ffc107;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            background-color: #343a40;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Recetas de Mariscos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="recetas.html">Recetas <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="recipe-header text-center">
+        <div class="container">
+            <h1 class="display-4 mb-4">Langosta a la Parrilla</h1>
+            <p class="lead mb-0">Un plato elegante y sofisticado que combina la dulzura de la langosta con el sabor ahumado de la parrilla</p>
+        </div>
+    </header>
+
+    <!-- Información básica -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="recipe-info">
+                    <div class="row">
+                        <div class="col-md-3 info-item">
+                            <i class="far fa-clock fa-2x text-primary mb-2"></i>
+                            <h4 class="h6">Tiempo Total</h4>
+                            <p class="mb-0">60 minutos</p>
+                        </div>
+                        <div class="col-md-3 info-item">
+                            <i class="fas fa-user-friends fa-2x text-primary mb-2"></i>
+                            <h4 class="h6">Porciones</h4>
+                            <p class="mb-0">2 personas</p>
+                        </div>
+                        <div class="col-md-3 info-item">
+                            <i class="fas fa-signal fa-2x text-primary mb-2"></i>
+                            <h4 class="h6">Dificultad</h4>
+                            <p class="mb-0">Media-Alta</p>
+                        </div>
+                        <div class="col-md-3 info-item">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="mb-0">5/5 (64 votos)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <!-- Columna principal -->
+            <div class="col-lg-8">
+                <!-- Descripción -->
+                <section class="mb-5">
+                    <h2 class="mb-4">Sobre esta Receta</h2>
+                    <p class="lead">La langosta a la parrilla es uno de los platos más elegantes y deliciosos de la cocina de mariscos. La carne dulce y tierna de la langosta se realza con el sabor ahumado de la parrilla y la riqueza de la mantequilla de ajo.</p>
+                    <p>Esta receta es perfecta para ocasiones especiales y cenas románticas. La clave está en la frescura de la langosta y en el control preciso de la temperatura de la parrilla.</p>
+                </section>
+
+                <!-- Ingredientes -->
+                <section class="ingredients-list mb-5">
+                    <h2 class="mb-4">Ingredientes</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="h5 mb-3">Ingredientes Principales:</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>2 langostas frescas (500g cada una)</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>200g de mantequilla sin sal</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>4 dientes de ajo</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>2 limones</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>Perejil fresco</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>Sal marina</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>Pimienta negra recién molida</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="h5 mb-3">Utensilios Necesarios:</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-utensil-spoon text-primary mr-2"></i>Parrilla o barbacoa</li>
+                                <li class="mb-2"><i class="fas fa-utensil-spoon text-primary mr-2"></i>Tijeras de cocina</li>
+                                <li class="mb-2"><i class="fas fa-utensil-spoon text-primary mr-2"></i>Brocha de cocina</li>
+                                <li class="mb-2"><i class="fas fa-utensil-spoon text-primary mr-2"></i>Termómetro de cocina</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pasos -->
+                <section class="mb-5">
+                    <h2 class="mb-4">Preparación</h2>
+                    <div class="step-card">
+                        <div class="d-flex">
+                            <div class="step-number">1</div>
+                            <div>
+                                <h3 class="h5">Preparación de la Langosta</h3>
+                                <p>Corta las langostas por la mitad a lo largo y limpia el interior. Deja la carne en su caparazón.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="d-flex">
+                            <div class="step-number">2</div>
+                            <div>
+                                <h3 class="h5">Preparación de la Mantequilla</h3>
+                                <p>Derrite la mantequilla y mezcla con ajo picado, perejil, sal y pimienta. Mantén caliente.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="d-flex">
+                            <div class="step-number">3</div>
+                            <div>
+                                <h3 class="h5">Cocción en la Parrilla</h3>
+                                <p>Coloca las langostas en la parrilla caliente, con la carne hacia arriba. Pincela con la mantequilla de ajo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="d-flex">
+                            <div class="step-number">4</div>
+                            <div>
+                                <h3 class="h5">Finalización</h3>
+                                <p>Cocina por 12-15 minutos hasta que la carne esté opaca. Sirve con limón y mantequilla extra.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tips y Consejos -->
+                <section class="tips-section">
+                    <h2 class="mb-4">Consejos del Chef</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="h5 mb-3">Para la Langosta:</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-lightbulb text-primary mr-2"></i>Elegir langosta fresca y viva</li>
+                                <li class="mb-2"><i class="fas fa-lightbulb text-primary mr-2"></i>No sobrecocinar</li>
+                                <li class="mb-2"><i class="fas fa-lightbulb text-primary mr-2"></i>Mantener la temperatura constante</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="h5 mb-3">Para la Mantequilla:</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-lightbulb text-primary mr-2"></i>Usar mantequilla de calidad</li>
+                                <li class="mb-2"><i class="fas fa-lightbulb text-primary mr-2"></i>Infusionar bien con las hierbas</li>
+                                <li class="mb-2"><i class="fas fa-lightbulb text-primary mr-2"></i>Servir caliente</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Información Nutricional -->
+                <div class="nutrition-card mb-4">
+                    <h2 class="h4 mb-4">Información Nutricional</h2>
+                    <div class="nutrition-item d-flex justify-content-between">
+                        <span>Calorías</span>
+                        <strong>320 kcal</strong>
+                    </div>
+                    <div class="nutrition-item d-flex justify-content-between">
+                        <span>Proteínas</span>
+                        <strong>32g</strong>
+                    </div>
+                    <div class="nutrition-item d-flex justify-content-between">
+                        <span>Carbohidratos</span>
+                        <strong>2g</strong>
+                    </div>
+                    <div class="nutrition-item d-flex justify-content-between">
+                        <span>Grasas</span>
+                        <strong>22g</strong>
+                    </div>
+                    <div class="nutrition-item d-flex justify-content-between">
+                        <span>Colesterol</span>
+                        <strong>145mg</strong>
+                    </div>
+                </div>
+
+                <!-- Recetas Relacionadas -->
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="h5 mb-0">Recetas Relacionadas</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group list-group-flush">
+                            <a href="receta1.html" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="h6 mb-1">Camarones al Ajillo</h4>
+                                    <small class="text-muted">30 min</small>
+                                </div>
+                                <small class="text-muted">Un clásico de la cocina marinera</small>
+                            </a>
+                            <a href="receta2.html" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="h6 mb-1">Ceviche de Mariscos</h4>
+                                    <small class="text-muted">45 min</small>
+                                </div>
+                                <small class="text-muted">Fresco y delicioso</small>
+                            </a>
+                            <a href="receta4.html" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="h6 mb-1">Paella de Mariscos</h4>
+                                    <small class="text-muted">90 min</small>
+                                </div>
+                                <small class="text-muted">La auténtica receta española</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="h5 mb-0">¡Recibe Más Recetas!</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Suscríbete a nuestro boletín para recibir las mejores recetas de mariscos.</p>
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Tu email">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Suscribirse</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compartir -->
+        <div class="share-buttons text-center">
+            <h3 class="mb-4">Comparte esta Receta</h3>
+            <a href="#" class="btn btn-primary"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="#" class="btn btn-info"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#" class="btn btn-danger"><i class="fab fa-pinterest"></i> Pinterest</a>
+            <a href="#" class="btn btn-success"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Recetas de Mariscos</h4>
+                    <p>Tu fuente de inspiración culinaria marina.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Inicio</a></li>
+                        <li><a href="recetas.html" class="text-white">Recetas</a></li>
+                        <li><a href="sobre-nosotros.html" class="text-white">Sobre Nosotros</a></li>
+                        <li><a href="contacto.html" class="text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Recetas de Mariscos. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

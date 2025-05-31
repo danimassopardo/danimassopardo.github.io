@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora nuestras recetas de mariscos, filtra por tipo y disfruta de los mejores sabores del mar.">
+    <meta name="keywords" content="recetas, mariscos, camarones, ceviche, paella, langosta">
+    <meta name="author" content="Recetas de Mariscos">
+    <title>Recetas de Mariscos | Inicio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilosrecetas.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Recetas de Mariscos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recetas.html">Recetas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero section con vídeo -->
+    <header class="hero bg-dark text-white text-center py-5 mt-5" role="banner">
+        <div class="container">
+            <h1 class="display-4">Recetas Deliciosas de Mariscos</h1>
+            <p class="lead">¡Explora una variedad de recetas frescas y sabrosas para disfrutar del mar en tu hogar!</p>
+            
+            <!-- Vídeo promocional -->
+            <div class="mt-4 video-container" aria-label="Vídeo promocional de Recetas de Mariscos">
+                <div class="embed-responsive embed-responsive-16by9 shadow-lg">
+                    <video class="embed-responsive-item" controls poster="images/video-poster.jpg" aria-label="Vídeo promocional" title="Vídeo promocional de Recetas de Mariscos">
+                        <source src="videos/promocional.mp4" type="video/mp4">
+                        <source src="videos/promocional.webm" type="video/webm">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Carrusel de recetas destacadas -->
+    <section class="carousel-section py-5 bg-light">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h2 class="section-title">Descubre Nuestras Especialidades</h2>
+                    <p class="lead text-muted">Explora nuestra selección de platos más populares y sorprende a tus invitados</p>
+                </div>
+            </div>
+            <div id="recetas-carousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#recetas-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#recetas-carousel" data-slide-to="1"></li>
+                    <li data-target="#recetas-carousel" data-slide-to="2"></li>
+                    <li data-target="#recetas-carousel" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner rounded-lg shadow-lg">
+                    <div class="carousel-item active">
+                        <div class="carousel-overlay"></div>
+                        <img src="images/camarones.jpeg" class="d-block w-100" alt="Camarones al Ajillo">
+                        <div class="carousel-caption text-left">
+                            <span class="badge badge-primary mb-2">Destacado</span>
+                            <h3>Camarones al Ajillo</h3>
+                            <p class="mb-3">Deliciosos camarones salteados en aceite de oliva con ajo y guindilla</p>
+                            <div class="recipe-meta mb-3">
+                                <span><i class="far fa-clock mr-2"></i>30 min</span>
+                                <span class="mx-3"><i class="fas fa-user-friends mr-2"></i>4 personas</span>
+                                <span><i class="fas fa-star mr-2"></i>4.9/5</span>
+                            </div>
+                            <a href="receta1.html" class="btn btn-primary">Ver Receta <i class="fas fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-overlay"></div>
+                        <img src="images/ceviche.jpeg" class="d-block w-100" alt="Ceviche de Mariscos">
+                        <div class="carousel-caption text-left">
+                            <span class="badge badge-primary mb-2">Popular</span>
+                            <h3>Ceviche de Mariscos</h3>
+                            <p class="mb-3">Una explosión de sabores frescos del mar con limón y cilantro</p>
+                            <div class="recipe-meta mb-3">
+                                <span><i class="far fa-clock mr-2"></i>45 min</span>
+                                <span class="mx-3"><i class="fas fa-user-friends mr-2"></i>6 personas</span>
+                                <span><i class="fas fa-star mr-2"></i>4.8/5</span>
+                            </div>
+                            <a href="receta2.html" class="btn btn-primary">Ver Receta <i class="fas fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-overlay"></div>
+                        <img src="images/langosta.jpeg" class="d-block w-100" alt="Langosta a la Parrilla">
+                        <div class="carousel-caption text-left">
+                            <span class="badge badge-primary mb-2">Premium</span>
+                            <h3>Langosta a la Parrilla</h3>
+                            <p class="mb-3">La mejor langosta a la parrilla con mantequilla de hierbas</p>
+                            <div class="recipe-meta mb-3">
+                                <span><i class="far fa-clock mr-2"></i>60 min</span>
+                                <span class="mx-3"><i class="fas fa-user-friends mr-2"></i>2 personas</span>
+                                <span><i class="fas fa-star mr-2"></i>4.9/5</span>
+                            </div>
+                            <a href="receta3.html" class="btn btn-primary">Ver Receta <i class="fas fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-overlay"></div>
+                        <img src="images/paella.jpeg" class="d-block w-100" alt="Paella de Mariscos">
+                        <div class="carousel-caption text-left">
+                            <span class="badge badge-primary mb-2">Tradicional</span>
+                            <h3>Paella de Mariscos</h3>
+                            <p class="mb-3">La auténtica paella española con los mejores mariscos</p>
+                            <div class="recipe-meta mb-3">
+                                <span><i class="far fa-clock mr-2"></i>90 min</span>
+                                <span class="mx-3"><i class="fas fa-user-friends mr-2"></i>6 personas</span>
+                                <span><i class="fas fa-star mr-2"></i>4.7/5</span>
+                            </div>
+                            <a href="receta4.html" class="btn btn-primary">Ver Receta <i class="fas fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#recetas-carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#recetas-carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-fish fa-3x text-primary mb-3"></i>
+                            <h3 class="h4">Ingredientes Frescos</h3>
+                            <p>Utilizamos solo los mariscos más frescos y de la mejor calidad para nuestras recetas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-utensils fa-3x text-primary mb-3"></i>
+                            <h3 class="h4">Recetas Fáciles</h3>
+                            <p>Instrucciones paso a paso para que puedas preparar platos deliciosos sin complicaciones.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-star fa-3x text-primary mb-3"></i>
+                            <h3 class="h4">Resultados Garantizados</h3>
+                            <p>Recetas probadas y perfeccionadas para garantizar resultados excepcionales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="container my-5 text-center">
+        <h2>¿Listo para empezar a cocinar?</h2>
+        <p class="lead mb-4">Explora nuestra colección completa de recetas y encuentra tu próximo plato favorito.</p>
+        <a href="recetas.html" class="btn btn-primary btn-lg">Ver Todas las Recetas</a>
+    </section>
+
+    <!-- Infografía -->
+    <section class="infografia-section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Guía de Mariscos</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="infografia-card">
+                        <div class="infografia-icon">
+                            <i class="fas fa-fish"></i>
+                        </div>
+                        <h3 class="infografia-title">Selección</h3>
+                        <p class="infografia-text">Cómo elegir mariscos frescos:</p>
+                        <ul class="infografia-list">
+                            <li>Olor fresco a mar</li>
+                            <li>Carne firme al tacto</li>
+                            <li>Color brillante y natural</li>
+                            <li>Ojos brillantes en pescados</li>
+                            <li>Conchas cerradas en moluscos</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="infografia-card">
+                        <div class="infografia-icon">
+                            <i class="fas fa-temperature-high"></i>
+                        </div>
+                        <h3 class="infografia-title">Conservación</h3>
+                        <p class="infografia-text">Tips para mantener la frescura:</p>
+                        <ul class="infografia-list">
+                            <li>Temperatura ideal: 0-4°C</li>
+                            <li>Usar dentro de 1-2 días</li>
+                            <li>Mantener en recipiente cerrado</li>
+                            <li>No congelar más de 3 meses</li>
+                            <li>Descongelar en refrigerador</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="infografia-card">
+                        <div class="infografia-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3 class="infografia-title">Preparación</h3>
+                        <p class="infografia-text">Técnicas básicas de cocción:</p>
+                        <ul class="infografia-list">
+                            <li>A la plancha: 2-3 min por lado</li>
+                            <li>Hervido: 3-5 min para camarones</li>
+                            <li>Al vapor: 5-8 min para mejillones</li>
+                            <li>Al horno: 12-15 min a 180°C</li>
+                            <li>A la parrilla: 4-6 min por lado</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Recetas de Mariscos</h4>
+                    <p>Tu fuente de inspiración culinaria marina.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Inicio</a></li>
+                        <li><a href="recetas.html" class="text-white">Recetas</a></li>
+                        <li><a href="sobre-nosotros.html" class="text-white">Sobre Nosotros</a></li>
+                        <li><a href="contacto.html" class="text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Recetas de Mariscos. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

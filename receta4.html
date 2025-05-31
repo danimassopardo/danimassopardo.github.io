@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Paella de Mariscos - La auténtica receta española">
+    <meta name="keywords" content="paella, mariscos, arroz, camarones, mejillones, calamares, cocina española">
+    <title>Paella de Mariscos | Recetas de Mariscos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilosrecetas.css">
+    <style>
+        .recipe-header {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            padding: 100px 0;
+            color: white;
+            margin-top: 56px;
+        }
+
+        .recipe-info {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: -50px;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .recipe-info .info-item {
+            text-align: center;
+            padding: 15px;
+            border-right: 1px solid #dee2e6;
+        }
+
+        .recipe-info .info-item:last-child {
+            border-right: none;
+        }
+
+        .ingredients-list {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .step-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .nutrition-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .nutrition-item {
+            padding: 15px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .nutrition-item:last-child {
+            border-bottom: none;
+        }
+
+        .tips-section {
+            background-color: #e8f4ff;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .gallery-img {
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .share-buttons {
+            margin-top: 30px;
+        }
+
+        .share-buttons .btn {
+            margin: 5px;
+            border-radius: 30px;
+            padding: 10px 20px;
+        }
+
+        .rating {
+            color: #ffc107;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            background-color: #343a40;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Recetas de Mariscos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="recetas.html">Recetas <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="recipe-header text-center">
+        <div class="container">
+            <h1 class="display-4 mb-4">Paella de Mariscos</h1>
+            <p class="lead mb-0">La auténtica receta española que combina el mejor arroz con los sabores del mar</p>
+        </div>
+    </header>
+
+    <!-- Información básica -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="recipe-info">
+                    <div class="row">
+                        <div class="col-md-3 info-item">
+                            <i class="far fa-clock fa-2x text-primary mb-2"></i>
+                            <h4 class="h6">Tiempo Total</h4>
+                            <p class="mb-0">90 minutos</p>
+                        </div>
+                        <div class="col-md-3 info-item">
+                            <i class="fas fa-user-friends fa-2x text-primary mb-2"></i>
+                            <h4 class="h6">Porciones</h4>
+                            <p class="mb-0">6 personas</p>
+                        </div>
+                        <div class="col-md-3 info-item">
+                            <i class="fas fa-signal fa-2x text-primary mb-2"></i>
+                            <h4 class="h6">Dificultad</h4>
+                            <p class="mb-0">Media</p>
+                        </div>
+                        <div class="col-md-3 info-item">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="mb-0">4.5/5 (86 votos)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <!-- Columna principal -->
+            <div class="col-lg-8">
+                <!-- Descripción -->
+                <section class="mb-5">
+                    <h2 class="mb-4">Sobre esta Receta</h2>
+                    <p class="lead">La paella de mariscos es uno de los platos más emblemáticos de la cocina española. Este arroz dorado y aromático, repleto de mariscos frescos, es una celebración de los sabores del Mediterráneo.</p>
+                    <p>Esta receta es perfecta para reuniones familiares y ocasiones especiales. La clave está en la calidad del arroz, el caldo de mariscos y el punto de cocción perfecto.</p>
+                </section>
+
+                <!-- Ingredientes -->
+                <section class="ingredients-list mb-5">
+                    <h2 class="mb-4">Ingredientes</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="h5 mb-3">Ingredientes Principales:</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>500g de arroz bomba</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>400g de camarones</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>500g de mejillones</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>300g de calamares</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>2 pimientos rojos</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>1 cebolla grande</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>4 dientes de ajo</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>1.5L de caldo de mariscos</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>Azafrán</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>Aceite de oliva</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="h5 mb-3">Utensilios Necesarios:</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-utensil-spoon text-primary mr-2"></i>Paella (sartén especial)</li>
+                                <li class="mb-2"><i class="fas fa-utensil-spoon text-primary mr-2"></i>Cuchara de madera</li>
+                                <li class="mb-2"><i class="fas fa-utensil-spoon text-primary mr-2"></i>Tabla de cortar</li>
+                                <li class="mb-2"><i class="fas fa-utensil-spoon text-primary mr-2"></i>Cuchillo afilado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pasos -->
+                <section class="mb-5">
+                    <h2 class="mb-4">Preparación</h2>
+                    <div class="step-card">
+                        <div class="d-flex">
+                            <div class="step-number">1</div>
+                            <div>
+                                <h3 class="h5">Preparación de Verduras</h3>
+                                <p>Corta la cebolla, el ajo y los pimientos en trozos pequeños. Limpia y prepara los mariscos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="d-flex">
+                            <div class="step-number">2</div>
+                            <div>
+                                <h3 class="h5">Sofrito Base</h3>
+                                <p>En la paella, sofríe la cebolla, ajo y pimientos en aceite de oliva hasta que estén tiernos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="d-flex">
+                            <div class="step-number">3</div>
+                            <div>
+                                <h3 class="h5">Cocción del Arroz</h3>
+                                <p>Añade el arroz y el azafrán, remueve bien. Agrega el caldo caliente y cocina a fuego medio.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="d-flex">
+                            <div class="step-number">4</div>
+                            <div>
+                                <h3 class="h5">Incorporación de Mariscos</h3>
+                                <p>Cuando el arroz esté casi listo, añade los mariscos y cocina hasta que estén hechos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="d-flex">
+                            <div class="step-number">5</div>
+                            <div>
+                                <h3 class="h5">Reposo y Servido</h3>
+                                <p>Deja reposar 5-10 minutos antes de servir para que los sabores se asienten.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tips y Consejos -->
+                <section class="tips-section">
+                    <h2 class="mb-4">Consejos del Chef</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="h5 mb-3">Para el Arroz:</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-lightbulb text-primary mr-2"></i>Usar arroz bomba o similar</li>
+                                <li class="mb-2"><i class="fas fa-lightbulb text-primary mr-2"></i>No remover después de añadir el caldo</li>
+                                <li class="mb-2"><i class="fas fa-lightbulb text-primary mr-2"></i>Buscar el socarrat (costra del fondo)</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="h5 mb-3">Para los Mariscos:</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-lightbulb text-primary mr-2"></i>Usar mariscos frescos</li>
+                                <li class="mb-2"><i class="fas fa-lightbulb text-primary mr-2"></i>No cocinarlos en exceso</li>
+                                <li class="mb-2"><i class="fas fa-lightbulb text-primary mr-2"></i>Añadirlos en el momento correcto</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Información Nutricional -->
+                <div class="nutrition-card mb-4">
+                    <h2 class="h4 mb-4">Información Nutricional</h2>
+                    <div class="nutrition-item d-flex justify-content-between">
+                        <span>Calorías</span>
+                        <strong>450 kcal</strong>
+                    </div>
+                    <div class="nutrition-item d-flex justify-content-between">
+                        <span>Proteínas</span>
+                        <strong>28g</strong>
+                    </div>
+                    <div class="nutrition-item d-flex justify-content-between">
+                        <span>Carbohidratos</span>
+                        <strong>65g</strong>
+                    </div>
+                    <div class="nutrition-item d-flex justify-content-between">
+                        <span>Grasas</span>
+                        <strong>12g</strong>
+                    </div>
+                    <div class="nutrition-item d-flex justify-content-between">
+                        <span>Fibra</span>
+                        <strong>3g</strong>
+                    </div>
+                </div>
+
+                <!-- Recetas Relacionadas -->
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="h5 mb-0">Recetas Relacionadas</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group list-group-flush">
+                            <a href="receta1.html" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="h6 mb-1">Camarones al Ajillo</h4>
+                                    <small class="text-muted">30 min</small>
+                                </div>
+                                <small class="text-muted">Un clásico de la cocina marinera</small>
+                            </a>
+                            <a href="receta2.html" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="h6 mb-1">Ceviche de Mariscos</h4>
+                                    <small class="text-muted">45 min</small>
+                                </div>
+                                <small class="text-muted">Fresco y delicioso</small>
+                            </a>
+                            <a href="receta3.html" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="h6 mb-1">Langosta a la Parrilla</h4>
+                                    <small class="text-muted">60 min</small>
+                                </div>
+                                <small class="text-muted">Un plato elegante y sofisticado</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="h5 mb-0">¡Recibe Más Recetas!</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Suscríbete a nuestro boletín para recibir las mejores recetas de mariscos.</p>
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Tu email">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Suscribirse</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compartir -->
+        <div class="share-buttons text-center">
+            <h3 class="mb-4">Comparte esta Receta</h3>
+            <a href="#" class="btn btn-primary"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="#" class="btn btn-info"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#" class="btn btn-danger"><i class="fab fa-pinterest"></i> Pinterest</a>
+            <a href="#" class="btn btn-success"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Recetas de Mariscos</h4>
+                    <p>Tu fuente de inspiración culinaria marina.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Inicio</a></li>
+                        <li><a href="recetas.html" class="text-white">Recetas</a></li>
+                        <li><a href="sobre-nosotros.html" class="text-white">Sobre Nosotros</a></li>
+                        <li><a href="contacto.html" class="text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Recetas de Mariscos. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

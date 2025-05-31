@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce más sobre nuestro proyecto de recetas de mariscos">
+    <meta name="keywords" content="sobre nosotros, equipo, historia, recetas, mariscos">
+    <title>Sobre Nosotros | Recetas de Mariscos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilosrecetas.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/about-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            margin-top: 56px;
+            color: white;
+        }
+        
+        .history-section {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+            margin-top: 0;
+        }
+        
+        .history-image {
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .values-section {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .value-card {
+            transition: transform 0.2s;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .team-section {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .team-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .team-card img {
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .team-card .card-body {
+            padding: 25px;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #007bff;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Recetas de Mariscos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recetas.html">Recetas</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section bg-dark">
+        <div class="container text-center">
+            <h1 class="display-4 mb-4 text-white">Sobre Nosotros</h1>
+            <p class="lead mb-0 text-white">Descubre la pasión detrás de nuestras recetas</p>
+        </div>
+    </header>
+
+    <!-- Historia -->
+    <section class="history-section">
+        <div class="container">
+            <h2 class="section-title text-dark">Nuestra Historia</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="lead mb-4">Desde 2024, compartiendo la pasión por los mariscos</p>
+                    <p class="mb-4">Este proyecto nació como una iniciativa para compartir las mejores recetas de mariscos y ayudar a los amantes de la cocina a preparar platos deliciosos en casa. Nuestra misión es hacer que la cocina de mariscos sea accesible para todos.</p>
+                    <p>A través de recetas detalladas, consejos profesionales y técnicas probadas, queremos inspirar a más personas a explorar el maravilloso mundo de la cocina marina.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/about-history.jpg" alt="Cocineros preparando mariscos" class="img-fluid history-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valores -->
+    <section class="values-section">
+        <div class="container">
+            <h2 class="section-title text-dark">Nuestros Valores</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="value-card card h-100 shadow">
+                        <div class="card-body text-center p-5">
+                            <i class="fas fa-heart fa-3x text-primary mb-4"></i>
+                            <h3 class="h4 mb-3">Pasión</h3>
+                            <p class="mb-0">Amamos lo que hacemos y lo transmitimos en cada receta que compartimos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card card h-100 shadow">
+                        <div class="card-body text-center p-5">
+                            <i class="fas fa-star fa-3x text-primary mb-4"></i>
+                            <h3 class="h4 mb-3">Calidad</h3>
+                            <p class="mb-0">Solo compartimos recetas probadas y perfeccionadas por nuestro equipo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card card h-100 shadow">
+                        <div class="card-body text-center p-5">
+                            <i class="fas fa-users fa-3x text-primary mb-4"></i>
+                            <h3 class="h4 mb-3">Comunidad</h3>
+                            <p class="mb-0">Creemos en compartir y aprender juntos como una comunidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title text-dark">Nuestro Equipo</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team-card card shadow">
+                        <img src="images/chef1.jpg" class="card-img-top" alt="Chef Principal">
+                        <div class="card-body text-center">
+                            <h3 class="h5 mb-2">Pepe Solla</h3>
+                            <p class="text-primary mb-3">Chef Principal</p>
+                            <p class="mb-0">Especialista en mariscos con más de 10 años de experiencia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-card card shadow">
+                        <img src="images/chef2.jpg" class="card-img-top" alt="Chef de Desarrollo">
+                        <div class="card-body text-center">
+                            <h3 class="h5 mb-2">Carlos Rodríguez</h3>
+                            <p class="text-primary mb-3">Chef de Desarrollo</p>
+                            <p class="mb-0">Encargado de crear y probar nuevas recetas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-card card shadow">
+                        <img src="images/chef3.jpg" class="card-img-top" alt="Chef de Contenido">
+                        <div class="card-body text-center">
+                            <h3 class="h5 mb-2">Ana Martínez</h3>
+                            <p class="text-primary mb-3">Chef de Contenido</p>
+                            <p class="mb-0">Responsable de documentar y compartir nuestras recetas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Recetas de Mariscos</h4>
+                    <p>Tu fuente de inspiración culinaria marina.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Inicio</a></li>
+                        <li><a href="recetas.html" class="text-white">Recetas</a></li>
+                        <li><a href="sobre-nosotros.html" class="text-white">Sobre Nosotros</a></li>
+                        <li><a href="contacto.html" class="text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Recetas de Mariscos. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html> 

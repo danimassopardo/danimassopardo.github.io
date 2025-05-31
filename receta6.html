@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Almejas a la Marinera - Receta tradicional española">
+    <meta name="keywords" content="almejas a la marinera, almejas, receta, mariscos, cocina española">
+    <title>Almejas a la Marinera | Recetas de Mariscos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilosrecetas.css">
+    <style>
+        .recipe-header {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            padding: 100px 0;
+            color: white;
+            margin-top: 56px;
+        }
+
+        .recipe-info {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: -50px;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .recipe-info .info-item {
+            text-align: center;
+            padding: 15px;
+            border-right: 1px solid #dee2e6;
+        }
+
+        .recipe-info .info-item:last-child {
+            border-right: none;
+        }
+
+        .ingredients-list {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .step-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .nutrition-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .nutrition-item {
+            padding: 15px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .nutrition-item:last-child {
+            border-bottom: none;
+        }
+
+        .tips-section {
+            background-color: #e8f4ff;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .gallery-img {
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .share-buttons {
+            margin-top: 30px;
+        }
+
+        .share-buttons .btn {
+            margin: 5px;
+            border-radius: 30px;
+            padding: 10px 20px;
+        }
+
+        .rating {
+            color: #ffc107;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            background-color: #343a40;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Recetas de Mariscos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="recetas.html">Recetas <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="recipe-header text-center">
+        <div class="container">
+            <h1 class="display-4 mb-4">Almejas a la Marinera</h1>
+            <p class="lead mb-0">Un clásico de la cocina marinera española con un toque de vino blanco</p>
+        </div>
+    </header>
+
+    <!-- Información básica -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="recipe-info">
+                    <div class="row">
+                        <div class="col-md-3 info-item">
+                            <i class="far fa-clock fa-2x text-primary mb-2"></i>
+                            <h4 class="h6">Tiempo Total</h4>
+                            <p class="mb-0">25 minutos</p>
+                        </div>
+                        <div class="col-md-3 info-item">
+                            <i class="fas fa-user-friends fa-2x text-primary mb-2"></i>
+                            <h4 class="h6">Porciones</h4>
+                            <p class="mb-0">4 personas</p>
+                        </div>
+                        <div class="col-md-3 info-item">
+                            <i class="fas fa-signal fa-2x text-primary mb-2"></i>
+                            <h4 class="h6">Dificultad</h4>
+                            <p class="mb-0">Fácil</p>
+                        </div>
+                        <div class="col-md-3 info-item">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="mb-0">5/5 (98 votos)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <!-- Columna principal -->
+            <div class="col-lg-8">
+                <!-- Descripción -->
+                <section class="mb-5">
+                    <h2 class="mb-4">Sobre esta Receta</h2>
+                    <p class="lead">Las almejas a la marinera son un plato tradicional de la cocina española que destaca por su sencillez y sabor intenso. La combinación del vino blanco con el ajo y el perejil crea una salsa deliciosa que realza el sabor natural de las almejas.</p>
+                    <p>Esta receta es perfecta como entrante o como plato principal ligero, y es ideal para compartir. El secreto está en la calidad de las almejas y en el vino blanco que se utilice.</p>
+                </section>
+
+                <!-- Ingredientes -->
+                <section class="ingredients-list mb-5">
+                    <h2 class="mb-4">Ingredientes</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="h5 mb-3">Ingredientes Principales:</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>1 kg de almejas frescas</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>4 dientes de ajo</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>1 vaso de vino blanco</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>Perejil fresco picado</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>Aceite de oliva virgen extra</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>Sal al gusto</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>1 guindilla (opcional)</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="h5 mb-3">Utensilios Necesarios:</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-utensil-spoon text-primary mr-2"></i>Sartén grande con tapa</li>
+                                <li class="mb-2"><i class="fas fa-utensil-spoon text-primary mr-2"></i>Tabla de cortar</li>
+                                <li class="mb-2"><i class="fas fa-utensil-spoon text-primary mr-2"></i>Cuchillo afilado</li>
+                                <li class="mb-2"><i class="fas fa-utensil-spoon text-primary mr-2"></i>Cuenco grande</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pasos -->
+                <section class="mb-5">
+                    <h2 class="mb-4">Preparación</h2>
+                    <div class="step-card">
+                        <div class="d-flex">
+                            <div class="step-number">1</div>
+                            <div>
+                                <h3 class="h5">Limpieza de las Almejas</h3>
+                                <p>Limpiar las almejas en agua con sal durante 30 minutos para que suelten la arena. Enjuagar bien y escurrir.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="d-flex">
+                            <div class="step-number">2</div>
+                            <div>
+                                <h3 class="h5">Preparación del Sofrito</h3>
+                                <p>En una sartén grande, calentar el aceite y dorar los ajos picados. Si se usa guindilla, añadirla en este momento.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="d-flex">
+                            <div class="step-number">3</div>
+                            <div>
+                                <h3 class="h5">Cocción de las Almejas</h3>
+                                <p>Añadir las almejas a la sartén, verter el vino blanco y tapar. Cocinar a fuego medio-alto hasta que se abran (3-4 minutos).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="d-flex">
+                            <div class="step-number">4</div>
+                            <div>
+                                <h3 class="h5">Finalización</h3>
+                                <p>Espolvorear con perejil picado, remover suavemente y servir inmediatamente con la salsa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tips y Consejos -->
+                <section class="tips-section">
+                    <h2 class="mb-4">Consejos del Chef</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="h5 mb-3">Para las Almejas:</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-lightbulb text-primary mr-2"></i>Usar almejas frescas y vivas</li>
+                                <li class="mb-2"><i class="fas fa-lightbulb text-primary mr-2"></i>Desechar las que estén abiertas antes de cocinar</li>
+                                <li class="mb-2"><i class="fas fa-lightbulb text-primary mr-2"></i>No cocinar en exceso para evitar que se endurezcan</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="h5 mb-3">Para la Salsa:</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-lightbulb text-primary mr-2"></i>Usar un buen vino blanco seco</li>
+                                <li class="mb-2"><i class="fas fa-lightbulb text-primary mr-2"></i>Ajustar la cantidad de ajo al gusto</li>
+                                <li class="mb-2"><i class="fas fa-lightbulb text-primary mr-2"></i>El perejil debe añadirse al final</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Información Nutricional -->
+                <div class="nutrition-card mb-4">
+                    <h2 class="h4 mb-4">Información Nutricional</h2>
+                    <div class="nutrition-item d-flex justify-content-between">
+                        <span>Calorías</span>
+                        <strong>180 kcal</strong>
+                    </div>
+                    <div class="nutrition-item d-flex justify-content-between">
+                        <span>Proteínas</span>
+                        <strong>24g</strong>
+                    </div>
+                    <div class="nutrition-item d-flex justify-content-between">
+                        <span>Carbohidratos</span>
+                        <strong>4g</strong>
+                    </div>
+                    <div class="nutrition-item d-flex justify-content-between">
+                        <span>Grasas</span>
+                        <strong>7g</strong>
+                    </div>
+                    <div class="nutrition-item d-flex justify-content-between">
+                        <span>Fibra</span>
+                        <strong>0g</strong>
+                    </div>
+                </div>
+
+                <!-- Recetas Relacionadas -->
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="h5 mb-0">Recetas Relacionadas</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group list-group-flush">
+                            <a href="receta5.html" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="h6 mb-1">Pulpo a la Gallega</h4>
+                                    <small class="text-muted">60 min</small>
+                                </div>
+                                <small class="text-muted">Un clásico de la cocina gallega</small>
+                            </a>
+                            <a href="receta1.html" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="h6 mb-1">Camarones al Ajillo</h4>
+                                    <small class="text-muted">30 min</small>
+                                </div>
+                                <small class="text-muted">Deliciosos camarones al ajillo</small>
+                            </a>
+                            <a href="receta4.html" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="h6 mb-1">Paella de Mariscos</h4>
+                                    <small class="text-muted">90 min</small>
+                                </div>
+                                <small class="text-muted">La auténtica receta española</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="h5 mb-0">¡Recibe Más Recetas!</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Suscríbete a nuestro boletín para recibir las mejores recetas de mariscos.</p>
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Tu email">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Suscribirse</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compartir -->
+        <div class="share-buttons text-center">
+            <h3 class="mb-4">Comparte esta Receta</h3>
+            <a href="#" class="btn btn-primary"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="#" class="btn btn-info"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#" class="btn btn-danger"><i class="fab fa-pinterest"></i> Pinterest</a>
+            <a href="#" class="btn btn-success"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Recetas de Mariscos</h4>
+                    <p>Tu fuente de inspiración culinaria marina.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Inicio</a></li>
+                        <li><a href="recetas.html" class="text-white">Recetas</a></li>
+                        <li><a href="sobre-nosotros.html" class="text-white">Sobre Nosotros</a></li>
+                        <li><a href="contacto.html" class="text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Recetas de Mariscos. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html> 

@@ -1,0 +1,111 @@
+/* Estils generals per a la pàgina de receptes */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section per a cada recepta */
+.hero {
+    background: url('https://images.unsplash.com/photo-1571838489160-3c399cf7069e') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2;
+}
+
+/* Secció de la recepta: imatge i instruccions */
+section.container {
+    padding-top: 50px;
+}
+
+section img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+section img:hover {
+    transform: scale(1.05);
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* Llistes d'ingredients i instruccions */
+ul, ol {
+    padding-left: 20px;
+}
+
+li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Botons */
+.btn {
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Resposta per pantalles petites */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
